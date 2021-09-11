@@ -17,7 +17,7 @@ function xn = newtonraphson (f, df, a, tol)
       while (er>tol) 
       f = feval (f, a);
       df = feval (df, a);
-      xn = a - ((fa)/(dfa));
+      xn = a - ((f)/(df));
         if (n>0)
           er=abs(((xb-xn)/xb))*100;
           n=n+1;
