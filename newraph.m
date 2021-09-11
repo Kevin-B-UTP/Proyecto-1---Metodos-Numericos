@@ -25,7 +25,7 @@ function xn = newtonraphson (f, df, a, tol)
           fprintf('%2i \t %f \t  %f\n', n, xn, er);
           xb=xn;
        endif    
-       if (n=0)
+       if (n==0)
             fprintf('\nIter. \t Xn \n');
             fprintf('%2i \t %f \t  %f\n', n, xn);
             n=n+1;
