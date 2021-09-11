@@ -1,4 +1,4 @@
-## newton-raphson(función, derivada, x_0, 0.0001)
+## newton-raphson(funciÃ³n, derivada, x_0, 0.0001)
 
 function xn = reglafalsa (funcion, derivada, x_0 , tol)
       clc;
@@ -6,17 +6,17 @@ function xn = reglafalsa (funcion, derivada, x_0 , tol)
       error = 10000;
       ## ENCABEZADO
       fprintf('\n__________________________________');
-      fprintf('\n   MÉTODO DE LA NEWTON-RAPHSON');
+      fprintf('\n   MÃ‰TODO DE LA NEWTON-RAPHSON');
       fprintf('\n__________________________________');
     
       ## INSTRUCCIONES
       
-      ## CICLO- EVALUACIÓN- APROXIMACIÓN ?
+      ## CICLO- EVALUACIÃ“N- APROXIMACIÃ“N ?
       
       ## SALIDA
          fprintf('\n\n================================');
          fprintf('\n   TOLERANCIA: %f',tol);
-         fprintf('\n APROXIMACIÓN: %f', xn);
+         fprintf('\n APROXIMACIÃ“N: %f', xn);
          fprintf('\n  ITERACIONES: %i', ciclo);
          fprintf('\n\n\n');
   
