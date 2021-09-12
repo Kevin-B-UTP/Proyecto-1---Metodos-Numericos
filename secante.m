@@ -1,6 +1,6 @@
   %metodo de la secante%
   clear, clc
-  cf = input('Ingrese funcion: ')
+  cf = input('Ingrese funcion: ');
   f = inline(cf);
   x0 = input('ingrese primer valor: ');
   x1 = input('ingrese segundo valor: ');
