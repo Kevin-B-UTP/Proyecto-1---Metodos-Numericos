@@ -12,28 +12,28 @@ function xn = newtonraphson (f, df, a, tol)
       fprintf('\n__________________________________');
       fprintf('\n   MÉTODO DE LA NEWTON-RAPHSON');
       fprintf('\n__________________________________');
-         
-      ## CICLO- EVALUACIÓN- APROXIMACIÓN ?
-      while (er>tol) 
       f = feval (f, a);
       df = feval (df, a);
-      xn = a - ((f)/(df));
+      ## CICLO- EVALUACIÓN- APROXIMACIÓN
+      while (er>tol) 
         if (n>0)
-          er=abs(((xb-xn)/xb))*100;
-          n=n+1;
-          fprintf('\nIter. \t Xn \t\t ERROR AB. \n');
+          xn = a - ((f)/(df));
+          er= abs(((xn-xb)/xn)*100);
+          fprintf('\nIter. \t Xn \t\t ERROR. \n');
           fprintf('%2i \t %f \t  %f\n', n, xn, er);
-          xb=xn;
+          n=n+1;
+          a=xn;
        endif    
-       if (n==0)
-            fprintf('\nIter. \t Xn \n');
-            fprintf('%2i \t %f \t  %f\n', n, xn);
-            n=n+1;
-            xb=xn;
-       endif  
+         if (n==0)
+              xn = a - ((f)/(df));
+              fprintf('\nIter. \t Xn \n');
+              fprintf('%2i \t %f \t  %f\n', n, a);
+              n=n+1;
+         endif
+       xb=xn;
       endwhile
       ## SALIDA
-         fprintf('\n\n================================');
+         fprintf('\n\n===================================');
          fprintf('\n   TOLERANCIA: %f',tol);
          fprintf('\n APROXIMACIÓN: %f', xn);
          fprintf('\n  ITERACIONES: %i', n);
