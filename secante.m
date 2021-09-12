@@ -1,5 +1,6 @@
 % Implementacion del metodo de secante
 % Grupo: Kevin Brennan, Edwar Gonzalez, Guillermo Lezcano
+%Advertencia: Escribir secante en la consola de comandos para inicializar
 
   clear, clc
   cf = input('Ingrese funcion: ');
