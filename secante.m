@@ -1,4 +1,6 @@
-  %metodo de la secante%
+% Implementacion del metodo de secante
+% Grupo: Kevin Brennan, Edwar Gonzalez, Guillermo Lezcano
+
   clear, clc
   cf = input('Ingrese funcion: ');
   f = inline(cf);
