@@ -3,7 +3,7 @@
 
 ## newton-raphson(función, derivada, x_0, 0.0001)
 
-function xn = reglafalsa (funcion, derivada, xi , tol)
+function xn = newtonraphson (funcion, derivada, xi , tol)
       clc;
       ciclo = 0; 
       error = 10000;
@@ -12,7 +12,7 @@ function xn = reglafalsa (funcion, derivada, xi , tol)
       fprintf('\n   MÉTODO DE LA NEWTON-RAPHSON');
       fprintf('\n__________________________________');
    
-      ## CICLO- EVALUACIÓN- APROXIMACIÓN ?
+      ## CICLO- EVALUACIÓN- APROXIMACIÓN
         while error > tol 
           
           ## NUEVA APROXIMACIÓN
