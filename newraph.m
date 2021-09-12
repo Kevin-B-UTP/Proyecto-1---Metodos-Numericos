@@ -1,6 +1,6 @@
 % Implementacion del metodo de newton raphson
 % Grupo: Kevin Brennan, Edwar Gonzalez, Guillermo Lezcano
-% Escrito por Kevin Brennan - 2021
+
 
 ## newtonraphson(función, derivada de la funcion, aproximacion, 0.0001)
 
