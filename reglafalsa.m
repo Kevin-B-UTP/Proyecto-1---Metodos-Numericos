@@ -1,6 +1,8 @@
-## Copyright (C) 2021 Y√âRCKEN= EDWAR G
+% Implementacion del metodo de newton raphson
+% Grupo: Kevin Brennan, Edwar Gonzalez, Guillermo Lezcano
+## Copyright (C) 2021 Y√É‚Ä∞RCKEN= EDWAR G
 
-## reglafalsa(funciÛn, a, b, 0.0001);
+## reglafalsa(funci√≥n, a, b, 0.0001);
 
 function xn = reglafalsa (funcion, a, b, tol)
     clc;
@@ -8,21 +10,21 @@ function xn = reglafalsa (funcion, a, b, tol)
     error = 10000;
     ## ENCABEZADO
     fprintf('\n__________________________________');
-    fprintf('\n    M…TODO DE LA REGLA FALSA');
+    fprintf('\n    M√âTODO DE LA REGLA FALSA');
     fprintf('\n__________________________________');
     
     
     
-    ## EVALUO LA FUNCI”N  EN a y b
+    ## EVALUO LA FUNCI√ìN  EN a y b
     fa = feval (funcion, a);
     fb = feval (funcion, b);
     
-    ## PASO #1 LA SOLUCI”N EST¡ EN EL INTERVALO?
+    ## PASO #1 LA SOLUCI√ìN EST√Å EN EL INTERVALO?
     if( fa * fb ) < 0
     
         while error > tol 
           
-            ## PASO #2 NUEVA APROXIMACI”N
+            ## PASO #2 NUEVA APROXIMACI√ìN
             xn = b-((fb*(a-b))/(fa-fb));
             fx = feval (funcion, xn);
             
@@ -53,7 +55,7 @@ function xn = reglafalsa (funcion, a, b, tol)
          endwhile  
          fprintf('\n\n================================');
          fprintf('\n   TOLERANCIA: %f',tol);
-         fprintf('\n APROXIMACI”N: %f', xn);
+         fprintf('\n APROXIMACI√ìN: %f', xn);
          fprintf('\n  ITERACIONES: %i', ciclo);
          fprintf('\n\n\n');
      else
