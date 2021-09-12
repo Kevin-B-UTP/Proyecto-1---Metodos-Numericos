@@ -1,26 +1,19 @@
-## METODO_SECANTE(función, derivada, x_0, 0.0001)
-
-function xn = reglafalsa (funcion, x_a, x_n , tol)
-      clc;
-      ciclo = 0; 
-      error = 10000;
-      ## ENCABEZADO
-      fprintf('\n__________________________________');
-      fprintf('\n      MÉTODO DE LA SECANTE');
-      fprintf('\n__________________________________');
-    
-      ## INSTRUCCIONES
-      
-      ## CICLO- EVALUACIÓN- APROXIMACIÓN ?
-      
-      ## SALIDA
-         fprintf('\n\n================================');
-         fprintf('\n   TOLERANCIA: %f',tol);
-         fprintf('\n APROXIMACIÓN: %f', xn);
-         fprintf('\n  ITERACIONES: %i', ciclo);
-         fprintf('\n\n\n');
-  
-      
-  
-  
-  endfunction
+  %metodo de la secante%
+  clear, clc
+  cf = input('Ingrese funcion: ')
+  f = inline(cf);
+  x0 = input('ingrese primer valor: ');
+  x1 = input('ingrese segundo valor: ');
+  tol = input('ingrese la tolerancia deseada: ');
+  error = 100;
+  n = 0;
+  fprintf('    n     xo       x1      x2    error\n');
+  fprintf('    %i    %4.4f  %4.4f  ----  ----\n',n,x0,x1);
+  while ( error>tol )
+     x2 = x1 - (x1-x0)*f(x1)/(f(x1)-f(x0));
+     error = abs ( f(x2) );
+     fprintf('    %i   %4.4f    %4.4f  %4.4f \n',n,x0,x1,x2,error);
+     x0 = x1;
+     x1 = x2;
+     n = n+1;   
+  end
